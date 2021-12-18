@@ -6,6 +6,7 @@ local Plug = vim.fn['plug#']
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
+vim.opt.number = true
 
 vim.call('plug#begin', '~/.nvim/plugged')
 
@@ -49,5 +50,5 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
