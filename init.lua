@@ -1,9 +1,11 @@
+require('lua/config')
+
+
 local Plug = vim.fn['plug#']
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
-vim.opt.numbers
 
 vim.call('plug#begin', '~/.nvim/plugged')
 
@@ -13,7 +15,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'Hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'williamboman/nvim-lsp-installer'
 
 vim.call('plug#end')
 
@@ -47,22 +48,5 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-
-local lsp_installer = require("nvim-lsp-installer")
-
--- Register a handler that will be called for all installed servers.
--- Alternatively, you may also register handlers on specific server instances instead (see example below).
-lsp_installer.on_server_ready(function(server)
-    local opts = {}
-
-    -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --     opts.root_dir = function() ... end
-    -- end
-
-    -- This setup() function is exactly the same as lspconfig's setup function.
-    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-    server:setup(opts)
-end)
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
