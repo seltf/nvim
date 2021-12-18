@@ -1,0 +1,11 @@
+Updated. Elapsed time: 2.054317 sec.
+[=======]
+
+- Finishing ... Done!
+- nvim-cmp: Already installed
+- cmp-nvim-lsp: Already installed
+- nvim-lspconfig: Already installed
+- ripgrep: Resolving deltas: 100% (2171/2171), done.
+- telescope.nvim: Already installed
+- plenary.nvim: Already installed
+- nvim-treesitter: Already installed
