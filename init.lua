@@ -15,6 +15,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'Hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'williamboman/nvim-lsp-installer'
 
 vim.call('plug#end')
 
