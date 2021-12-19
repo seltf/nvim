@@ -17,6 +17,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
+Plug 'rafi/awesome-vim-colorschemes'
 
 vim.call('plug#end')
 
@@ -89,9 +90,8 @@ nkeymap('<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
 
 -- Setup nvim-cmp.
 local cmp = require'cmp'
-
-cmp.setup({
-  mapping = {
+  cmp.setup({
+    mapping = {
       ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
       ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
       ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
@@ -112,6 +112,8 @@ cmp.setup({
       { name = 'buffer' },
     })
   })
+
+
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
   cmp.setup.cmdline('/', {
     sources = {
