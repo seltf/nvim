@@ -1,10 +1,14 @@
 local Plug = vim.fn['plug#']
-
+    
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 vim.opt.number = true
 
+
+-- Run Vimscript files
+
+-- Plugins
 vim.call('plug#begin', '~/.nvim/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
@@ -17,7 +21,9 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
-Plug 'rafi/awesome-vim-colorschemes'
+Plug 'marko-cerovac/material.nvim'
+Plug 'catppuccin/nvim'
+Plug 'glepnir/zephyr-nvim'
 
 vim.call('plug#end')
 
@@ -139,3 +145,4 @@ local cmp = require'cmp'
 
 -- vim.opt.foldmethod = "expr"
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.cmd[[colorscheme catppuccin]]
